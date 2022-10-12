@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Greeting() {
+	const greeting = { name: "Robenson" };
+	const mainGreet = <h1>Hello {greeting.name}!</h1>;
+	return mainGreet;
 }
 
+function WelcomeIn() {
+	const welcome = (
+		<>
+			<Greeting />
+			<h2>Welcome</h2>
+		</>
+	);
+	return welcome;
+}
+
+function App() {
+	return (
+		<WelcomeIn />
+	); /*functions thrown into the exported component need to be capitalized */
+}
 export default App;
